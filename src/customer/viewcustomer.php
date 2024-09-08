@@ -27,6 +27,7 @@
                     <th> Name </th>
                     <th> Phone </th>
                     <th> RoomNo </th>
+                    <th> Verified </th>
                     <th> Delete </th>
                     <th> Update </th>
 
@@ -46,6 +47,17 @@
     <td> <?php echo $res['Name'];  ?> </td>
     <td> <?php echo $res['Phone'];  ?> </td>
     <td> <?php echo $res['RoomNo'];  ?> </td>
+    <td> 
+        <?php 
+            if($res['verified'] == 0){
+                echo "unverified";
+            }
+            else{
+                echo "verified";
+            }  
+        
+        ?> 
+    </td>
     <td> <button class="btn-danger btn"> <a href="deletecustomer.php?ID=<?php echo $res['ID']; ?>" class="text-white"> Delete </a>  </button> </td>
     <td> <button class="btn-primary btn"> <a href="updatecustomer.php?ID=<?php echo $res['ID']; ?>" class="text-white"> Update </a> </button> </td>
   
@@ -62,7 +74,7 @@
         <br>
         <br>
         <td class="align-middle">
-            <a href="customer.html">
+            <a href="../customer.html">
                 <button class="bg-info text-white text-center" type="submit">Back</button>
             </a>
         </td>  

@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.head{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),
+    rgba(4,9,30,0.7)) , url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.head1{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),
+    rgba(4,9,30,0.7)) , url(../img/bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.text{
+    font-size:30px;
+    flex-basis:40%;
+    top:10%;
+    color: #ffffff;
+    left: 20%;
+    right: 10%;
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(54, 180, 248, 0.2);
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MBS PROPERTIES Management System</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+
+    <body>
+
+        <div class = "container" style = "max-width: 50%;">
+            <div class = "text-primary text-center mt-5 mb-4">
+                <h1> Search Customer </h1>
+            </div>
+
+            <input type = "text" class = "form-control" id="live_search" 
+                autocomplete = "off" placeholder = "Enter Customer ID...">
+        </div>
+
+        <div id = "searchresult"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script type = "text/javascript">
+            $(document).ready(function ()
+            {
+                $("#live_search").keyup(function(){
+                    var input = $(this).val();
+                    //alert(input);
+
+                    if (input != ""){
+                        $.ajax({
+                            url: "searchcustomer.php",
+                            method: "POST",
+                            data: {input:input},
+
+                            success:function(data){
+                                $("#searchresult").html(data);
+                                $("#searchresult").css("display","block");
+                            }
+                        });
+                    } else{
+                        $("#searchresult").css("display","none");
+                    }
+                });
+            });
+        </script>
+        
+        <br><br>
+        <div class="back">
+            <a href="customer.html"><button type="submit">BACK</button></a>
+        </div> 
+
+    </body>
+</html>
+
